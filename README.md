@@ -9,14 +9,15 @@ Installation
 Add spree_elasticsearch_index to your Gemfile:
 
 ```ruby
-gem 'spree_elasticsearch_index'
+gem 'spree_elasticsearch_index', github: 'iszandro/spree_elasticsearch_index'
 ```
+
+**Note** This gem dependends on `gem 'elasticsearch-model'`.
 
 Bundle your dependencies and run the installation generator:
 
 ```shell
 bundle
-bundle exec rails g spree_elasticsearch_index:install
 ```
 
 To index Spree models add the following in to your `Rakefile`
