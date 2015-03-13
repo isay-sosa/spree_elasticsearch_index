@@ -2,7 +2,7 @@ module Spree
   Product.class_eval do
     include Elasticsearch::Model
 
-    after_save { SpreeElasticsearchIndex::Indexer.perform(:index, self) }
-    after_destroy { SpreeElasticsearchIndex::Indexer.perform(:delete, self) }
+    after_save { ElasticsearchIndexJob.enqueue('index', self) }
+    after_destroy { ElasticsearchIndexJob.enqueue('delete', self) }
   end
 end

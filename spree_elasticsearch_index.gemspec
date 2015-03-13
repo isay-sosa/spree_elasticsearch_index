@@ -12,5 +12,6 @@ Gem::Specification.new do |s|
   s.require_path = 'lib'
   s.requirements << 'none'
 
-  s.add_development_dependency 'elasticsearch-model'
+  s.add_dependency 'elasticsearch-model'
+  s.add_dependency 'activejob'
 end
