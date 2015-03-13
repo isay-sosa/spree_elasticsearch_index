@@ -45,6 +45,6 @@ ActiveJob::Base.queue_adapter = :inline
 
 Active Job has built-in adapters for multiple queueing backends (Sidekiq, Resque, Delayed Job and others). To get an up-to-date list of the adapters see the API Documentation for [ActiveJob::QueueAdapters](http://api.rubyonrails.org/classes/ActiveJob/QueueAdapters.html).
 
-SpreeElasticsearchIndex uses `active_jobs_default` as queue. So, if you are using Sidekiq, then you need to run it as `bundle exec sidekiq --queue active_jobs_elasticsearch --verbose`.
+SpreeElasticsearchIndex uses `active_jobs_elasticsearch` as queue. So, if you are using Sidekiq, then you need to run it as `bundle exec sidekiq --queue active_jobs_elasticsearch --verbose`.
 
 Copyright (c) 2015 [name of extension creator], released under the New BSD License
